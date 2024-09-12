@@ -1,0 +1,14 @@
+<%- include("header") -%>
+
+<h1><%= homeTitle %></h1>
+<p><%= homeContent %></p>
+
+<%  receivedPosts.forEach(element => { %>
+    <h1><%= element.composeTitle %></h1>
+    <p>
+        <%= element.composeContent.substring(0, 100) + " ..." %>
+        <a href="/post/<%= element.composeTitle%>">Read More</a>
+    </p>
+<% }); %>
+
+<%- include("footer") -%>
